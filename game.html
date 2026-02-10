@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game - The Lanka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo"><h1>The Lanka</h1></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="index.html#games">Games</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Game Detail Section -->
+  <section id="games" class="game-detail-section">
+    <div class="container">
+      <h2 id="game-title">Game Name</h2>
+      <p id="game-desc">Game description goes here.</p>
+      <h3>How to Play:</h3>
+      <ul id="game-rules"></ul>
+      <div class="game-rules-container"></div>
+      <a href="index.html#games" class="primary-btn">Back to Games</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 The Lanka. Website developed with ❤️ by <a href="https://github.com/1rohitkhanal" target="_blank">github</a></p>
+  </footer>
+
+  <!-- Script to show correct game -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const game = params.get('game'); // chess, ludo, snake, jhinga, uno
+
+    const gameData = {
+      chess: {
+        title: "Chess",
+        desc: "A classic strategy board game for two players.",
+        rules: [
+          "Each player starts with 16 pieces.",
+          "The goal is to checkmate your opponent's king.",
+          "Pieces move differently: pawns forward, knights in L-shape, etc.",
+          "Players take turns moving one piece at a time."
+        ]
+      },
+      ludo: {
+        title: "Ludo",
+        desc: "Fun family board game with dice and tokens.",
+        rules: [
+          "Each player has 4 tokens.",
+          "Roll the dice and move tokens according to the number.",
+          "First player to bring all tokens to home wins.",
+          "Landing on opponent's token sends it back to start."
+        ]
+      },
+      snake: {
+        title: "Snake & Ladder",
+        desc: "Climb ladders and avoid snakes to reach the last square first.",
+        rules: [
+          "Roll the dice and move your piece accordingly.",
+          "Climb ladders to advance faster.",
+          "Landing on a snake sends you back down.",
+          "First player to reach the last square wins."
+        ]
+      },
+      jhinga: {
+        title: "Jhinga",
+        desc: "Stack wooden pieces carefully or the stack may fall!",
+        rules: [
+          "Players take turns stacking wooden pieces one by one.",
+          "Do not make the stack wobble while placing your piece.",
+          "After stacking, players remove pieces in groups.",
+          "The player who makes the stack fall loses the game."
+        ]
+      },
+      uno: {
+        title: "UNO",
+        desc: "Fast-paced card game for friends and family.",
+        rules: [
+          "Each player gets 7 cards at the start.",
+          "Match the top card in color or number to play.",
+          "Special cards like Skip, Reverse, Draw Two add fun twists.",
+          "First player to play all cards wins!"
+        ]
+      }
+    };
+
+    // Fill the page dynamically
+    if(gameData[game]){
+      document.getElementById('game-title').textContent = gameData[game].title;
+      document.getElementById('game-desc').textContent = gameData[game].desc;
+      const ul = document.getElementById('game-rules');
+      gameData[game].rules.forEach(rule => {
+        const li = document.createElement('li');
+        li.textContent = rule;
+        ul.appendChild(li);
+      });
+    } else {
+      document.getElementById('game-title').textContent = "Game Not Found";
+      document.getElementById('game-desc').textContent = "Oops! The game you selected does not exist.";
+    }
+  </script>
+</body>
+</html>
