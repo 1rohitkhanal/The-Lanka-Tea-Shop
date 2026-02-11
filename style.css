@@ -38,7 +38,23 @@ header {
   padding: 8px 0;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
 }
+   @media (max-width: 768px) {
+  header {
+    padding: 8px 12px;   /* reduce vertical space */
+    height: auto;        /* let it shrink naturally */
+  }
+  header h1 {
+    font-size: 1.4rem;   /* smaller site title */
+  }
+  nav a {
+    font-size: 0.95rem;  /* lighter nav links */
+    padding: 6px;        /* less padding around links */
+  }
+}
+
+
 
 /* Container */
 .header-container {
@@ -57,6 +73,10 @@ header {
   letter-spacing: 2px;
   cursor: pointer;
   margin: 0;
+}
+header img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Navigation links */
@@ -168,6 +188,34 @@ header {
 .hero-image img:hover {
   transform: scale(1.05);
 }
+/* ===== HERO SECTION SPACING ===== */
+
+.hero h1 {
+  font-size: 2.5rem;      /* adjust as needed */
+  margin-bottom: 1.5rem;  /* space between heading and paragraph */
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.125rem;    /* slightly bigger for readability */
+  margin-bottom: 2rem;    /* space after paragraph before buttons */
+  color: #333;            /* professional text color */
+}
+
+.hero-buttons a {
+  margin-right: 15px;     /* space between buttons */
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: #7A4B2D; /* your primary color */
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.hero-buttons a:hover {
+  background-color: #59321b;
+}
 
 /* ===== ABOUT / WHY CHOOSE US ===== */
 .why-choose-us {
@@ -240,7 +288,42 @@ html {
   font-size: 15px;
   color: var(--text-dark);
 }
+/* ===== WHY CHOOSE US GALLERY ===== */
 
+.why-gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+  -webkit-overflow-scrolling: touch; /* smooth swipe on mobile */
+}
+
+.why-slide {
+  flex: 0 0 auto;        /* auto width, no shrinking */
+  scroll-snap-align: start;
+  border-radius: 15px;
+  overflow: hidden;      /* round corners without cropping inside */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.why-slide img {
+  display: block;
+  width: 100%;           /* full width of container */
+  height: auto;          /* keep original aspect ratio */
+  object-fit: cover;     /* fills container nicely without distortion */
+  transition: transform 0.3s ease;
+}
+
+/* Optional: zoom effect on hover */
+.why-slide img:hover {
+  transform: scale(1.05);
+}
+
+/* Hide scrollbar */
+.why-gallery::-webkit-scrollbar {
+  display: none;
+}
 /* Developer credit in footer */
 footer .developer-credit {
   margin-top: 15px;
@@ -701,7 +784,6 @@ footer .social-icons img:hover {
     margin-top: 30px;
     max-width: 80%;
   }
-
 }
 /* ===== MOBILE FIXES ONLY ===== */
 @media (max-width: 600px) {
