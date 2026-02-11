@@ -2,113 +2,260 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Game - The Lanka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lanka Tea Shop</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
+ <!-- Header -->
+  <header>
     <div class="header-container">
       <div class="logo"><h1>The Lanka</h1></div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="index.html#games">Games</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#games">Games</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- Game Detail Section -->
-  <section id="games" class="game-detail-section">
-    <div class="container">
-      <h2 id="game-title">Game Name</h2>
-      <p id="game-desc">Game description goes here.</p>
-      <h3>How to Play:</h3>
-      <ul id="game-rules"></ul>
-      <div class="game-rules-container"></div>
-      <a href="index.html#games" class="primary-btn">Back to Games</a>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="hero-section">
+      <div class="container hero-content">
+
+        <div class="hero-text">
+          <h2>Welcome to The Lanka HUB — where tradition meets connection.</h2>
+          <p>
+         Thoughtfully designed to reflect the warmth of a village gathering space, The Lanka offers an inviting atmosphere where tea lovers come together to unwind and engage. With carefully selected teas, comfortable surroundings, and timeless games such as Chess, Ludo, Uno, and Jhinga, we create an experience that is both sophisticated and familiar — a place where conversations flow naturally and every visit feels meaningful.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#about" class="btn primary-btn">About Us</a>
+            <a href="https://www.google.com/search?sca_esv=b21dda8be8fa643d&sxsrf=ANbL-n6ziKAF4sHrrMkLePJzwUFitZxPsA:1770670839364&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOR_B6-N5RTKh0jy6v5qef7bS1hnBFnyOUi4Kuo0Y80yQnE7965hGhc4QP0yqRNlVqN4ZH-YwkukFQYStp94gHCS1XmcM&q=The+Lanka+Reviews&sa=X&ved=2ahUKEwiS15Pzps2SAxU53jgGHZsnK68Q0bkNegQIHBAF&biw=1366&bih=599&dpr=1" target="_blank" class="btn review-btn">
+              Leave a Review
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="images/logo.png" alt="The Lanka Tea Shop exterior">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ABOUT why choose us ================= -->
+    <section id="about" class="why-choose-us">
+      <div class="container about-container">
+
+        <div class="about-text">
+          <span class="subheading">WHY CHOOSE US</span>
+          <h2>A Unique Village Tea Shop Experience</h2>
+          <pre><p>
+          Our tea shop blends bamboo aesthetics, fun
+          activities,and community events to create 
+          a space everyone loves.
+          </p></pre>
+
+          <ul class="feature-list">
+            <li>✔ Cozy bamboo & pebble village vibe</li>
+           <pre> <li>✔ Games like chess, ludo, snake & ladder,
+              Jhinga,UNO etc.</li></pre>
+            <li>✔ Live bands & special events</li>
+            <li>✔ Spacious community-friendly environment</li>
+            <li>✔ Relax, connect & enjoy great tea</li>
+          </ul>
+        </div>
+
+       <div class="why-gallery">
+         <img src="images/event.jpeg" alt="Cozy Space">
+         <img src="images/lobby.jpeg" alt="Lobby">
+         <img src="images/events.jpeg" alt="events">
+         <img src="images/shop.webp" alt="Tea Experience">
+         <img src="images/hookah.jpeg" alt="Games Area">
+         <img src="images/fries.jpeg" alt="Community Moments">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Games Section (index.html) -->
+<section id="games">
+  <div class="container">
+    
+    
+  <section id="games" class="games-section">
+  <h2>Games You Can Enjoy</h2>
+  <p>Relax, have fun, and enjoy these classic games at The Lanka! Click the image for rules about each game. Invite your friends to join!</p>
+
+  <div class="games-grid">
+    <div class="game-card">
+      <a href="game.html?game=chess">
+        <img src="images/chess.jpg" alt="Chess game at The Lanka" class="game-image">
+        <h3>Chess</h3>
+      </a>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 The Lanka. Website developed with ❤️ by <a href="https://github.com/1rohitkhanal" target="_blank">github</a></p>
-  </footer>
+    <div class="game-card">
+      <a href="game.html?game=ludo">
+        <img src="images/ludo.webp" alt="Ludo game at The Lanka" class="game-image">
+        <h3>Ludo</h3>
+      </a>
+    </div>
 
-  <!-- Script to show correct game -->
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const game = params.get('game'); // chess, ludo, snake, jhinga, uno
+    <div class="game-card">
+      <a href="game.html?game=snake">
+        <img src="images/snake.jpg" alt="Snake & Ladder game at The Lanka" class="game-image">
+        <h3>Snake & Ladder</h3>
+      </a>
+    </div>
 
-    const gameData = {
-      chess: {
-        title: "Chess",
-        desc: "A classic strategy board game for two players.",
-        rules: [
-          "Each player starts with 16 pieces.",
-          "The goal is to checkmate your opponent's king.",
-          "Pieces move differently: pawns forward, knights in L-shape, etc.",
-          "Players take turns moving one piece at a time."
-        ]
-      },
-      ludo: {
-        title: "Ludo",
-        desc: "Fun family board game with dice and tokens.",
-        rules: [
-          "Each player has 4 tokens.",
-          "Roll the dice and move tokens according to the number.",
-          "First player to bring all tokens to home wins.",
-          "Landing on opponent's token sends it back to start."
-        ]
-      },
-      snake: {
-        title: "Snake & Ladder",
-        desc: "Climb ladders and avoid snakes to reach the last square first.",
-        rules: [
-          "Roll the dice and move your piece accordingly.",
-          "Climb ladders to advance faster.",
-          "Landing on a snake sends you back down.",
-          "First player to reach the last square wins."
-        ]
-      },
-      jhinga: {
-        title: "Jhinga",
-        desc: "Stack wooden pieces carefully or the stack may fall!",
-        rules: [
-          "Players take turns stacking wooden pieces one by one.",
-          "Do not make the stack wobble while placing your piece.",
-          "After stacking, players remove pieces in groups.",
-          "The player who makes the stack fall loses the game."
-        ]
-      },
-      uno: {
-        title: "UNO",
-        desc: "Fast-paced card game for friends and family.",
-        rules: [
-          "Each player gets 7 cards at the start.",
-          "Match the top card in color or number to play.",
-          "Special cards like Skip, Reverse, Draw Two add fun twists.",
-          "First player to play all cards wins!"
-        ]
-      }
-    };
+    <div class="game-card">
+      <a href="game.html?game=jhinga">
+        <img src="images/jenga.jpg" alt="Jenga game at The Lanka" class="game-image">
+        <h3>Jenga</h3>
+      </a>
+    </div>
 
-    // Fill the page dynamically
-    if(gameData[game]){
-      document.getElementById('game-title').textContent = gameData[game].title;
-      document.getElementById('game-desc').textContent = gameData[game].desc;
-      const ul = document.getElementById('game-rules');
-      gameData[game].rules.forEach(rule => {
-        const li = document.createElement('li');
-        li.textContent = rule;
-        ul.appendChild(li);
-      });
-    } else {
-      document.getElementById('game-title').textContent = "Game Not Found";
-      document.getElementById('game-desc').textContent = "Oops! The game you selected does not exist.";
-    }
-  </script>
+    <div class="game-card">
+      <a href="game.html?game=uno">
+        <img src="images/uno.jpg" alt="UNO game at The Lanka" class="game-image">
+        <h3>UNO</h3>
+      </a>
+    </div>
+  </div>
+</section>
+    <!-- ================= MENU PREVIEW ================= -->
+    <section id="menu" class="menu-preview">
+
+      <div class="container">
+
+        <span class="subheading">OUR MENU</span>
+        <h2>What We Serve</h2>
+        <p>Simple food, quality tea, and unforgettable vibes.</p>
+
+        <div class="menu-highlights">
+          <article class="menu-card">
+            <h3>🍳 Breakfast</h3>
+            <p>Eggs, bread, omelette & more</p>
+          </article>
+
+          <article class="menu-card">
+            <h3>🍜 Lanka Specials</h3>
+            <p>Keema noodles, dum puri, hot dog</p>
+          </article>
+
+          <article class="menu-card">
+            <h3>💨 Hookah</h3>
+            <p>Cloud & flavoured hookah</p>
+          </article>
+        </div>
+
+        <a href="menu.html" class="btn primary-btn">View Full Menu</a>
+
+      </div>
+    </section>
+
+    <!-- ================= MENU IMAGE PREVIEW ================= -->
+    <section class="menu-image-preview">
+      <div class="container">
+        <img src="images/menu.webp" alt="Printed menu of The Lanka Tea Shop">
+        <p class="menu-note">We love it when you visit us ❤️</p>
+      </div>
+    </section>
+    <section id="location" class="location-section">
+  <div class="container location-container">
+    <div class="location-text">
+      <span class="subheading">FIND US</span>
+      <h2>Visit The Lanka</h2>
+      <p>
+        Come chill with us at The Lanka — a peaceful tea hub where vibes,
+        games, and conversations flow endlessly.
+      </p>
+
+      <p class="address">
+        📍 Your exact location here<br>
+        ⏰ Open: 7 AM to 9 PM (Everyday)
+      </p>
+
+      <a href="https://maps.app.goo.gl/AFh9c7H67h5ukLSU7" target="_blank" class="btn primary-btn">
+        Open in Google Maps
+      </a>
+    </div>
+
+    <div class="location-map">
+      <img src="images/location.png" alt="The Lanka Location Map">
+    </div>
+  </div>
+</section>
+ <section class="contact-section">
+  <div class="container contact-container">
+    <h2>Contact Us</h2>
+    <p>Have questions, suggestions, or want to book a table? Reach out to us!</p>
+
+    <div class="contact-details">
+      <div class="contact-item">
+        <h3>Address</h3>
+        <p> Nepal , Kathmandu Basundhara Chowk , In Opposite of National Cardiac Centre</p>
+      </div>
+
+      <div class="contact-item" id="contact">
+        <h3>Phone</h3>
+        <p>+977 9826771553, 9706185151</p>
+      </div>
+
+      <div class="contact-item">
+        <h3>Email</h3>
+        <p>info@thelankatea.com</p>
+      </div>
+    </div>
+
+    <a href="mailto:info@thelankatea.com" class="primary-btn">Send us a message</a>
+  </div>
+</section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+ <footer class="site-footer" style="background:#222; color:#fff; padding:30px 0; text-align:center;">
+  <div class="container">
+
+    <p style="font-size:18px; margin-bottom:15px;">Follow us & leave a review</p>
+
+    <div class="social-icons" style="margin-bottom:20px;">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/iamthelanka/" target="_blank" style="margin:0 10px;">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" style="width:40px; height:40px;">
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@the.lanka" target="_blank" style="margin:0 10px;">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok.png" alt="TikTok" style="width:40px; height:40px;">
+      </a>
+
+      <!-- Google Reviews -->
+      <a href="https://www.google.com/search?sca_esv=b21dda8be8fa643d&sxsrf=ANbL-n6ziKAF4sHrrMkLePJzwUFitZxPsA:1770670839364&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOR_B6-N5RTKh0jy6v5qef7bS1hnBFnyOUi4Kuo0Y80yQnE7965hGhc4QP0yqRNlVqN4ZH-YwkukFQYStp94gHCS1XmcM&q=The+Lanka+Reviews&sa=X&ved=2ahUKEwiS15Pzps2SAxU53jgGHZsnK68Q0bkNegQIHBAF&biw=1366&bih=599&dpr=1" target="_blank" style="margin:0 10px;">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/google-logo.png" alt="Google Reviews" style="width:40px; height:40px;">
+      </a>
+    </div>
+
+    <hr style="border:0.5px solid #555; margin:20px 0;">
+
+    <p class="copyright" style="font-size:14px;">&copy; 2026 The Lanka. All rights reserved.</p>
+<p class="developer-credit">
+ Website developed with ❤️ by Rohit Khanal <a href="https://www.linkedin.com/in/rohit-khanal-17b892379" target="_blank">Linked IN</a>
+</p>
+  </div>
+ 
+</footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
