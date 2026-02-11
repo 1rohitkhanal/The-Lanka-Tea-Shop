@@ -350,21 +350,19 @@ html {
 /* ===== WHY CHOOSE US GALLERY ===== */
 .why-gallery {
   display: flex;
-  gap: 28px;          /* space between slides */
+  gap: 20px;                  /* space between slides */
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding: 20px 0;
   -webkit-overflow-scrolling: touch;
-  justify-content: center; /* centers slides nicely */
 }
+
 .why-slide {
-  flex: 0 0 auto;
+  flex: 0 0 calc(200px * 1.25); /* 25% bigger than original 200px */
   scroll-snap-align: start;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transform: scale(1.25);   /* slightly bigger */
-  transition: transform 0.3s ease;
 }
 .why-slide img {
   display: block;
@@ -946,3 +944,4 @@ footer .social-icons img:hover {
     white-space: nowrap;      /* prevent breaking */
   }
 }
+
