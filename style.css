@@ -186,16 +186,16 @@ header img {
 }
 /* ===== HERO SECTION ===== */
 .hero {
-  padding: 100px 24px;
+  padding: 100px 40px; /* increase horizontal padding from 24px to 40px */
   background: linear-gradient(120deg, #F5EDE3, #E8D8C3);
 }
 
 .hero-content {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1200px;   /* keeps content from stretching too far */
+  margin: 0 auto;      /* centers the content */
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
@@ -944,4 +944,5 @@ footer .social-icons img:hover {
     white-space: nowrap;      /* prevent breaking */
   }
 }
+
 
