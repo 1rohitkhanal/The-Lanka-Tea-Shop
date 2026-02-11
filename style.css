@@ -65,7 +65,60 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+/* Gallery container */
+.why-gallery-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+}
 
+/* Horizontal scrolling gallery */
+.why-gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.why-gallery img {
+  min-width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.why-gallery::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
+}
+
+/* Arrow buttons */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.7);
+}
 /* Logo */
 .logo h1 {
   color: #fff; /* white logo */
@@ -887,3 +940,4 @@ footer .social-icons img:hover {
     white-space: nowrap;      /* prevent breaking */
   }
 }
+
