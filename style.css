@@ -272,7 +272,10 @@ header img {
 
 /* ===== ABOUT / WHY CHOOSE US ===== */
 .why-choose-us {
-  background: var(--bg-soft);
+  display: flex;
+  flex-direction: column; /* default mobile-friendly */
+  align-items: center;
+  gap: 40px; /* space between text and gallery */
   padding: 100px 24px;
 }
 
@@ -285,8 +288,11 @@ header img {
   flex-wrap: wrap;
 }
 
-.about-container .text {
-  flex: 1;
+* Text part */
+.why-choose-us .about-text {
+  max-width: 800px;  /* keeps text readable */
+  text-align: center; /* professional and balanced */
+  margin: 0 auto;
 }
 
 .about-container .image {
@@ -342,24 +348,24 @@ html {
   color: var(--text-dark);
 }
 /* ===== WHY CHOOSE US GALLERY ===== */
-
 .why-gallery {
   display: flex;
-  gap: 20px;
+  gap: 28px;          /* space between slides */
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding: 20px 0;
-  -webkit-overflow-scrolling: touch; /* smooth swipe on mobile */
+  -webkit-overflow-scrolling: touch;
+  justify-content: center; /* centers slides nicely */
 }
-
 .why-slide {
-  flex: 0 0 auto;        /* auto width, no shrinking */
+  flex: 0 0 auto;
   scroll-snap-align: start;
   border-radius: 15px;
-  overflow: hidden;      /* round corners without cropping inside */
+  overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transform: scale(1.25);   /* slightly bigger */
+  transition: transform 0.3s ease;
 }
-
 .why-slide img {
   display: block;
   width: 100%;           /* full width of container */
@@ -940,4 +946,3 @@ footer .social-icons img:hover {
     white-space: nowrap;      /* prevent breaking */
   }
 }
-
