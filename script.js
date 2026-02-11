@@ -27,3 +27,13 @@ if (section) {
       }, 1000);
     }, 400);
   });
+const gallery = document.getElementById('whyGallery');
+const scrollAmount = 220; // Adjust how much scrolls each click
+
+document.querySelector('.arrow-left').addEventListener('click', () => {
+  gallery.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+document.querySelector('.arrow-right').addEventListener('click', () => {
+  gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
